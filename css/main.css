@@ -565,7 +565,7 @@ button:focus {
 
 .navbar-expand-md .navbar-toggler {
   background: #85C448;
-  border-radius: 0px;
+  border-radius: 50px;
   margin: 5px;
   cursor: pointer;
   float: right;

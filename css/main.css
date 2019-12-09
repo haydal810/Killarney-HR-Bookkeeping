@@ -1379,6 +1379,8 @@ button:focus {
 
 .featured-box .featured-content p {
   font-size: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* ==========================================================================

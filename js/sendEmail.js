@@ -8,7 +8,7 @@ function sendMail(contact) {
         .then(
             function (response) {
                 console.log("SUCCESS", response);
-                setTimeout($("#exampleModal").modal(), 1000); // the user will know that their message was sent successfully and is given feedback.
+                setTimeout($("#exampleModal").modal(), 500); // the user will know that their message was sent successfully and is given feedback.
                 document.getElementById("contactForm").reset() // the form is reset after submit button is hit
             },
             function (error) {

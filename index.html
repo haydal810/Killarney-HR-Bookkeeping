@@ -26,6 +26,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+  <!-- Email.js script -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_39ujZMXlbBfijIjdmzfs3");
+
+    })();
+  </script>
 
 </head>
 
@@ -600,7 +609,12 @@
                   </div>
                 </div>
                 <div class="content-inner">
-                  <p class="description">We started using Killarney HR in March 2019 as we knew the company needed a dedicated HR consultant as our business was expanding. In that time we have found Killarney HR has built a brilliant rapport with our Managers and staff which  is integral to a  multi site business. No query is too small or too big and having that availability gives great peace of mind. Killarney HR advocate for improvement and positive change in all HR aspects. We find them to be highly organised, efficient and completely competent in all HR matters.</p>
+                  <p class="description">We started using Killarney HR in March 2019 as we knew the company needed a
+                    dedicated HR consultant as our business was expanding. In that time we have found Killarney HR has
+                    built a brilliant rapport with our Managers and staff which is integral to a multi site business. No
+                    query is too small or too big and having that availability gives great peace of mind. Killarney HR
+                    advocate for improvement and positive change in all HR aspects. We find them to be highly organised,
+                    efficient and completely competent in all HR matters.</p>
                 </div>
               </div>
             </div>
@@ -776,7 +790,7 @@
         <div class="row">
           <div class="col-lg-9 col-md-9 col-xs-12">
             <div class="contact-block">
-              <form id="contactForm">
+              <form id="contactForm" onsubmit="return sendMail(this);" method="POST">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -787,22 +801,22 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required
-                        data-error="Please enter your email">
+                      <input type="text" placeholder="Your Phone Number" id="phone" name="phone" class="form-control"
+                        required data-error="Please enter your ph number">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required
-                        data-error="Please enter your subject">
+                      <input type="email" placeholder="Your Email" id="emailaddress" name="emailaddress"
+                        class="form-control" required data-error="Please enter your email">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <textarea class="form-control" id="message" placeholder="Your Message" rows="7"
-                        data-error="Write your message" required></textarea>
+                      <textarea class="form-control" id="message" name="message" placeholder="Your Message" rows="7"
+                        data-error="Please enter your message" required></textarea>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="submit-button">
@@ -815,8 +829,33 @@
               </form>
             </div>
           </div>
+
+
+          <!-- Contact AFTER message submit -->
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Your message was sent successfully!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="col-lg-3 col-md-3 col-xs-12">
-            <div class="contact-deatils">
+            <div class="contact-details">
               <!-- Content Info -->
               <div class="contact-info_area">
                 <div class="contact-info">
@@ -1010,6 +1049,9 @@
   <script src="js/form-validator.min.js"></script>
   <script src="js/contact-form-script.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Script for Email.js -->
+  <script src="js/sendEmail.js"></script>
 
 
   <!-- Script for facebook feed -->

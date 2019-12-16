@@ -104,14 +104,14 @@
   .bg-white .collapse.show {
     background: #fff;
   }
-  .navbar-toggleable-sm > .container {
+  /* .navbar-toggleable-sm > .container {
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
   }
   .navbar-expand-md .navbar-brand, .navbar-expand-md .navbar-toggler {
     margin: 12px 15px;
-  }
+  } */
   .navbar-expand-md .navbar-nav .active > .nav-link, .navbar-expand-md .navbar-nav .nav-link.active, .navbar-expand-md .navbar-nav .nav-link.active::before, .navbar-expand-md .navbar-nav .nav-link.open, .navbar-expand-md .navbar-nav .open > .nav-link {
     background: #ddd;
   }
@@ -225,11 +225,11 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .navbar-toggleable-sm > .container {
+  /* .navbar-toggleable-sm > .container {
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
-  }
+  } */
   .bg-white .collapse.show {
     background: #fff;
   }
@@ -239,9 +239,9 @@
   .bg-faded {
     background: #fff !important;
   }
-  .navbar-expand-md .navbar-brand, .navbar-expand-md .navbar-toggler {
+  /* .navbar-expand-md .navbar-brand, .navbar-expand-md .navbar-toggler {
     margin: 12px 15px;
-  }
+  } */
   .navbar-expand-md .navbar-nav .active > .nav-link, .navbar-expand-md .navbar-nav .nav-link.active, .navbar-expand-md .navbar-nav .nav-link.active::before, .navbar-expand-md .navbar-nav .nav-link.open, .navbar-expand-md .navbar-nav .open > .nav-link {
     background: #f1f1f1;
   }
